@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <title>cruds project</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cruds">
+            <p class="CRUDS">CRUDS</p>
+            <p class="username">Abdelrahman Ashraf</p>
+            <div class="inputs">
+                <input type="text" id="title" class="title" placeholder="title">
+                <div class="numbers">
+                    <input type="number" id="price" class="price" placeholder="price">
+                    <input type="number" id="taxes" class="taxes" placeholder="taxes">
+                    <input type="number" id="ads" class="ads" placeholder="ads">
+                    <input type="number" id="discount" class="discount" placeholder="discount">
+                    <div id="total" class="total">???</div>
+                </div>
+                <input type="number" id="count" class="count" placeholder="count">
+                <input type="text" id="category" class="category" placeholder="category">
+                <div id="create" class="create">Create</div>
+            </div>
+            <div class="outputs">
+                <input onkeyup="searchData(this.value)" id="search" type="text" class="search" placeholder="Search ...">
+                <div class="search-by">
+                    <div id="searchByTitle" onclick="getSearchById(this.id)" class="search-by-title">Search By Title</div>
+                    <div id="searchByCategory" onclick="getSearchById(this.id)" class="search-by-category">Search By Category</div>
+                </div>
+                <table id="table">
+                    <thead>
+                        <td>ID</td>
+                        <td>TITLE</td>
+                        <td>PRICE</td>
+                        <td>TAXES</td>
+                        <td>ADS</td>
+                        <td>DISCOUNT</td>
+                        <td>TOTAL</td>
+                        <td>CATEGORY</td>
+                        <td>UPDATE</td>
+                        <td>DELETE</td>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+                <div class="msg" id="msg">
+                    There are not any data .
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="backDelAlert" id="backDelAlert">
+        <div class="delAlert" id="delAlert">
+            <p>Are You Sure !!</p>
+            <div class="buttons">
+                <button id="yes" class="yes">Yes</button>
+                <button id="no" class="no">No</button>
+            </div>
+        </div>
+    </div>
+    <script src="style.js"></script>
+</body>
+
+
+</html>
